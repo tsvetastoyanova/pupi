@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{site.title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+<div class="site">
+
+<header class="site-header">
+  <h1 class="site-title">
+    <a href="/">{{site.title}}</a>
+  </h1>
+
+  <nav>
+    <ul>
+      {% for page in site.pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<main class="site-main">
+  {{content}}
+</main>
+
+<aside class="site-sidebar">
+</aside>
+
+<footer class="site-footer">
+  <p>The lazy person. &copy; copyrights 2019.</p>
+</footer>
+
+</div>
+  </body>
+  </html>
